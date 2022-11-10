@@ -259,11 +259,72 @@ body.pageOn #container {
     }
 }
 
+/*.container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}*/
+
+/* ===== 画像降らせる ===== */
+
+/*.food {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    animation: animate-food 8s linear;
+}
+
+/* 落ちる画像*/
+/*.food-1 {
+    background-image: url('img/food1.png');
+}
+
+.food-2 {
+    background-image: url('img/food2.png');
+}
+
+.food-3 {
+    background-image: url('img/food3.png');
+}
+
+.food-4 {
+    background-image: url('img/food4.png');
+}
+
+.food-5 {
+    background-image: url('img/food5.png');
+}*/
+
+/* ===== 降るアニメーション ===== */
+/*@keyframes animate-food {
+    0% {
+        opacity: 0;
+        top: 0;
+        transform: rotate(0);
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        top: 100vh;
+        transform: rotate(1080deg);
+    }
+} */
+
 /*ルーレットページ*/
 .display {
     animation: fadein 2s forwards;
     padding-top: 70px;
-    margin:0 auto;
+    margin: 0 auto;
 }
 
 @keyframes fadein {
@@ -278,6 +339,22 @@ body.pageOn #container {
 
 .display_main {
     width: auto;
+}
+
+.title_text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.feeling_title {
+    font-size: 30px;
+}
+
+.recomend_title {
+    font-size: 40px;
 }
 
 /* モーダル */
@@ -296,18 +373,27 @@ body.pageOn #container {
     padding: 2rem;
 }
 
+/*.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}*/
+
 .button-close {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-40%, 230%);
-    width: 100px;
+    transform: translate(-50%, 225%);
+    width: 150px;
     padding: 1em;
     background-color: #fff;
     border: 2px solid rgb(216, 126, 126);
     border-radius: 30px;
     text-align: center;
+    color: black;
 }
+
 
 .overlay {
     display: none;

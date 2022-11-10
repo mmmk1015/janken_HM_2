@@ -74,3 +74,34 @@ for (let i = 0; i < linkElem.length; i++) {
         stalker.classList.remove('hov_');
     });
 }
+
+//window.addEventListener('DOMContentLoaded', () => {
+    // コンテナを指定
+    //const container = document.querySelector('.container');
+
+    // 葉っぱを生成する関数
+    //const createFood = (foodClass, minSizeVal, maxSizeVal) => {
+        //const foodEl = document.createElement('span');
+        //foodEl.className = `food ${foodClass}`;
+        //const minSize = minSizeVal;
+        //const maxSize = maxSizeVal;
+        //const size = Math.random() * (maxSize + 1 - minSize) + minSize;
+        //foodEl.style.width = `${size}px`;
+        //foodEl.style.height = `${size}px`;
+        //foodEl.style.left = Math.random() * 100 + '%';
+        //container.appendChild(foodEl);
+
+        // 一定時間が経てば消す
+        //setTimeout(() => {
+        //   foodEl.remove();
+        //}, 8000);
+   // }
+
+    // 生成する間隔をミリ秒で指定する
+    // createFoodの引数には、'クラス名', '最小サイズ', '最大サイズ'を渡す
+    //setInterval(createFood.bind(this, 'food-1', 30, 50), 1000);
+    //setInterval(createFood.bind(this, 'food-2', 30, 50), 1000);
+    //setInterval(createFood.bind(this, 'food-3', 30, 50), 1000);
+    //setInterval(createFood.bind(this, 'food-4', 30, 50), 1000);
+    // setInterval(createFood.bind(this, 'food-5', 30, 50), 1000);
+//});

@@ -384,7 +384,7 @@ body.pageOn #container {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 225%);
+    transform: translate(-50%, 200%);
     width: 150px;
     padding: 1em;
     background-color: #fff;
@@ -426,7 +426,7 @@ body.pageOn #container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 210px;
+    height: 150px;
 }
 
 .cil {
@@ -497,15 +497,19 @@ body.pageOn #container {
     flex-direction: column;
     text-align: center;
     padding-bottom: 10px;
-    padding-top: 18px;
+    padding-top: 20px;
 }
 
 .feeling {
     font-size: 30px;
 }
 
+.link {
+    font-size: 25px;
+}
+
 .recomend {
-    font-size: 40px;
+    font-size: 35px;
 }
 
 /*back to HOME*/

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>郷土料理おもてなしルーレット</title>
+</head>
+
+<body>
+    <div id="cursor"></div>
+    <div id="stalker"></div>
+
+    <div class="display">
+        <div class="display_main">
+            <div id="roulette" class="roulette">
+                <p class="center-img">
+                    <img src="img/eat.png" alt="?" style="width:200px; height:200px;">
+                </p>
+            </div>
+
+            <div id="overlay" class="overlay"></div>
+            <div class="modal-window">
+                <div class="answer_text">
+                    <div id="feeling" class="feeling">今日はどこの</div>
+                    <p id="img" class="img">
+                        <img src="" alt="?" style="width:200px; height:200px;">
+                    </p>
+                    <div id="recomend" class="recomend">何食べさす？</div>
+                </div> <!-- 閉じるボタン -->
+                <a class="js-close button-close">Close</a>
+            </div>
+
+            <div class="c_button">
+                <a id="start" class="button">スタート</a>
+                <a id="stop" class="button js-open">ストップ</a>
+                <a id="reset" class="button">リセット</a>
+            </div>
+            <div>
+                <a href="index.html" class="back zoomIn" id="back">HOME</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="roulette.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,433 @@
+html,
+body,
+a,
+button {
+    cursor: none;
+}
+
+body {
+    font-family: Roboto, "筑紫B丸ゴシック", sans-serif;
+    line-height: 1.75;
+    font-size: 16px;
+    background-color: rgb(243, 243, 174, 0.700);
+    cursor: none;
+    position: relative;
+}
+
+#cursor {
+    pointer-events: none;
+    position: fixed;
+    top: -4px;
+    left: -4px;
+    width: 8px;
+    height: 8px;
+    background: rgb(202, 93, 93);
+    transform: translate(-100px, -100px);
+    border-radius: 50%;
+    z-index: 999;
+}
+
+#stalker {
+    pointer-events: none;
+    position: fixed;
+    top: -16px;
+    left: -16px;
+    width: 32px;
+    height: 32px;
+    background: rgb(216, 126, 126, 0.5);
+    border-radius: 50%;
+    transform: translate(-100px, -100px);
+    transition: transform 0.2s;
+    transition-timing-function: ease-out;
+    z-index: 998;
+}
+
+#stalker.hov_ {
+    top: -40px;
+    left: -40px;
+    width: 80px;
+    height: 80px;
+    transition: .15s;
+    background: rgb(213, 139, 139, 0.5);
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*#cursor {
+    transform: translate(0, 0);
+    pointer-events: none;
+    position: fixed;
+    top: -4px;
+    left: -4px;
+    width: 8px;
+    height: 8px;
+    background: #ef8989;
+    border-radius: 50%;
+    z-index: 999;
+    transition: width .3s, height .3s, top .3s, left .3s;
+}
+
+body:hover {
+    top: -12px;
+    left: -12px;
+    width: 32px;
+    height: 32px;
+    background: #ef8989;
+}*/
+
+/*トップページ*/
+/* 拡大 */
+.zoomIn {
+    animation-name: zoomInAnime;
+    animation-duration: 2.0s;
+    animation-fill-mode: forwards;
+    display: block;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    border: 2px solid rgb(216, 126, 126);
+    border-radius: 41% 59% 48% 52% / 52% 50% 50% 48%;
+    font-size: 30px;
+}
+
+@keyframes zoomInAnime {
+    from {
+        transform: scale(0.6);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.toppage {
+    position: relative;
+    background-color: rgb(243, 243, 174);
+    font-size: 40px;
+}
+
+.box {
+    width: 220px;
+    padding: 20px;
+    background: #666;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1 !important;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0 !important;
+        visibility: hidden;
+    }
+}
+
+/*テキスト円形に並べる*/
+.circle {
+    margin: 150px auto;
+    width: 470px;
+    height: 470px;
+    color: rgb(59, 56, 56);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.top_msg {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    animation: rotateAnim 35s linear infinite;
+}
+
+.top_msg:hover {
+    animation-play-state: paused;
+}
+
+@keyframes rotateAnim {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+span {
+    position: absolute;
+    inset: 0;
+    font-weight: 700;
+}
+
+.zoomCurtainbg {
+    display: block;
+    content: "";
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transform: scale3d(1);
+    background-color: #313131;
+    animation-name: zoomIn;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+/* zoomIn */
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale3d(0.3, .3, 0.3);
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    90% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+.fadeout {
+    animation: fadeOut 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#container {
+    opacity: 0;
+    /*はじめは透過0に*/
+}
+
+/*bodyにpageOnクラスがついたら出現*/
+body.pageOn #container {
+    animation-name: PageAnimeOn;
+    animation-duration: 1s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes PageAnimeOn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/*ルーレットページ*/
+.display {
+    animation: fadein 2s forwards;
+    padding-top: 70px;
+    margin:0 auto;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.display_main {
+    width: auto;
+}
+
+/* モーダル */
+.modal-window {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 500px;
+    background-color: #f9e5a9;
+    border-radius: 41% 59% 48% 69% / 52% 50% 50% 48%;
+    ;
+    z-index: 11;
+    padding: 2rem;
+}
+
+.button-close {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, 230%);
+    width: 100px;
+    padding: 1em;
+    background-color: #fff;
+    border: 2px solid rgb(216, 126, 126);
+    border-radius: 30px;
+    text-align: center;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(167, 130, 130, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+/*ルーレットイメージ*/
+.roulette {
+    display: block;
+    width: 300px;
+    height: 350px;
+    position: relative;
+    margin: auto;
+}
+
+.center-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 310px;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 210px;
+}
+
+.cil {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(143, 130, 130, 0.7);
+    border-radius: 30%;
+    /* 円*/
+    line-height: 80px;
+    color: #fff;
+    text-align: center;
+    display: block;
+    position: absolute;
+}
+
+.c_button {
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.button {
+    width: 150px;
+    height: 50px;
+    margin: 20px;
+    padding-top: 7.5px;
+    border: 2px solid rgb(216, 126, 126);
+    border-radius: 0;
+    background: #fff;
+    text-align: center;
+}
+
+.button:hover {
+    color: #fff;
+    background: rgb(216, 126, 126);
+}
+
+.red {
+    background-color: rgb(216, 126, 126, 0.8);
+    width: 80px;
+    height: 80px;
+    border-radius: 30%;
+    /* 円*/
+    line-height: 80px;
+    text-align: center;
+    display: block;
+    position: absolute;
+}
+
+.pink {
+    background-color: #f3cde9;
+    width: 80px;
+    height: 80px;
+    border-radius: 30%;
+    /* 円*/
+    line-height: 80px;
+    text-align: center;
+    display: block;
+    position: absolute;
+}
+
+.answer_text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 18px;
+}
+
+.feeling {
+    font-size: 30px;
+}
+
+.recomend {
+    font-size: 40px;
+}
+
+/*back to HOME*/
+.back {
+    display: flex;
+    color: #313131;
+    margin: auto;
+    width: 100px;
+    height: 110px;
+    font-size: 15px;
+}

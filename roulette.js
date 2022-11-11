@@ -96,7 +96,6 @@ $('#stop').on('click', function () {
         $('#feeling').text('〜今日は名古屋メシ〜');
         $('#img').html('<a href="https://www.kibun.co.jp/recipes/14056/index.html"><img src="img/dengaku.png" alt="田楽" style="width:150px; height:150px;"></a> ');
         $('#recomend').text('菜飯田楽');
-        $('.kaidashi').html('<a href="shop_dengaku.html" target="_blank"></a>');
     }
     else if (randomNumber === 1) {
         $('#feeling').text('〜今日は金沢メシ〜');
@@ -172,15 +171,6 @@ for (let i = 0; i < linkElem.length; i++) {
         stalker.classList.remove('hov_');
     });
 }
-
-$(function () {
-    $('.js-open').click(function () {
-        $('#overlay, .modal-window').fadeIn();
-    });
-    $('.js-close').click(function () {
-        $('#overlay, .modal-window').fadeOut();
-    });
-});
 
 /*外クリックでもclose*/
 $(function () {

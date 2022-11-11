@@ -10,8 +10,40 @@
 
 <body>
     <div id="cursor"></div>
-        <div id="stalker"></div>
+    <div id="stalker"></div>
+
+    <header>
+        <h1>買い出しメモ</h1>
+    </header>
+
+    <div class="wrap">
+        <p class="kaidashi-img" id="kaidashi-img">
+        </p>
+
+        <form>
+            <input type="text" class="todo-input" />
+            <button class="todo-button" type="submit">
+                <img src="img/plus.png" class="fas fa-plus-square">
+            </button>
+            <div class="select">
+                <select name="todos" class="filter-todo">
+                    <option value="all">全て</option>
+                    <option value="completed">完了</option>
+                    <option value="uncompleted">まだ</option>
+                </select>
+            </div>
+        </form>
+
+        <div class="todo-container">
+            <ul class="todo-list"></ul>
+        </div>
+    </div>
+
+    <div>
+        <a href="index.html" class="back zoomIn" id="back">HOME</a>
+    </div>
 </body>
 
 
 <script src="shop.js"></script>
+<script src="roulette.js"></script>

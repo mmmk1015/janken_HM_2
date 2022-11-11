@@ -172,11 +172,12 @@ for (let i = 0; i < linkElem.length; i++) {
     });
 }
 
+/*外クリックでもclose*/
 $(function () {
     $('.js-open').click(function () {
         $('#overlay, .modal-window').fadeIn();
     });
-    $('.js-close').click(function () {
+    $('.js-close , #overlay').click(function () {
         $('#overlay, .modal-window').fadeOut();
     });
 });

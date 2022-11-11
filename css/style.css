@@ -100,6 +100,7 @@ body:hover {
     border: 2px solid rgb(216, 126, 126);
     border-radius: 41% 59% 48% 52% / 52% 50% 50% 48%;
     font-size: 30px;
+    text-decoration: none;
 }
 
 @keyframes zoomInAnime {
@@ -259,66 +260,6 @@ body.pageOn #container {
     }
 }
 
-/*.container {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-}*/
-
-/* ===== 画像降らせる ===== */
-
-/*.food {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    position: absolute;
-    animation: animate-food 8s linear;
-}
-
-/* 落ちる画像*/
-/*.food-1 {
-    background-image: url('img/food1.png');
-}
-
-.food-2 {
-    background-image: url('img/food2.png');
-}
-
-.food-3 {
-    background-image: url('img/food3.png');
-}
-
-.food-4 {
-    background-image: url('img/food4.png');
-}
-
-.food-5 {
-    background-image: url('img/food5.png');
-}*/
-
-/* ===== 降るアニメーション ===== */
-/*@keyframes animate-food {
-    0% {
-        opacity: 0;
-        top: 0;
-        transform: rotate(0);
-    }
-
-    10% {
-        opacity: 1;
-    }
-
-    90% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-        top: 100vh;
-        transform: rotate(1080deg);
-    }
-} */
 
 /*ルーレットページ*/
 .display {
@@ -392,6 +333,7 @@ body.pageOn #container {
     border-radius: 30px;
     text-align: center;
     color: black;
+    text-decoration: none;
 }
 
 
@@ -523,6 +465,7 @@ body.pageOn #container {
 }
 
 /*買い出しリスト*/
+
 header {
     font-size: 1.5rem;
 }
@@ -656,4 +599,11 @@ select {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
 }

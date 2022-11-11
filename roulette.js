@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
     starter.addEventListener('click', start_set, false);
     stopper.addEventListener('click', stop_set, false);
     resetter.addEventListener('click', reset_set, false);
-    document.getElementById('stop').disabled = true;
+    document.getElementById("stop").disabled = true;
     document.getElementById("reset").disabled = true;
 });
 
@@ -172,7 +172,7 @@ for (let i = 0; i < linkElem.length; i++) {
     });
 }
 
-/*外クリックでもclose*/
+/*モーダルclose*/
 $(function () {
     $('.js-open').click(function () {
         $('#overlay, .modal-window').fadeIn();
@@ -180,4 +180,27 @@ $(function () {
     $('.js-close , #overlay').click(function () {
         $('#overlay, .modal-window').fadeOut();
     });
+});
+
+//ページ切り替えアニメーション
+const wrapper = document.querySelector(".wrapper");
+const pageTransitionDOMClass = 'jsPageTransition';
+const linkEls = [
+    ...document.querySelectorAll('a:not([href*="#"]):not([target])'),
+    ...document.querySelectorAll('.jsPageTransition'),
+];
+const currentHostName = window.location.hostname;
+
+function addFadeout(url) {
+    wrapper.classList.add("fadeout");
+    setTimeout(() => {
+        window.location = shop.html;
+    }, 300);
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (wrapper.classList.contains('fadeout')) {
+        wrapper.classList.remove('fadeout');
+    }
 });

@@ -390,7 +390,7 @@ body.pageOn #container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 0;
+    padding: 40px 0 25px 0;
 }
 
 .button {
@@ -464,6 +464,13 @@ body.pageOn #container {
     font-size: 15px;
 }
 
+.move_btn{
+    display:flex;
+    justify-content:center;
+    width:400px;
+    margin:auto;
+}
+
 /*買い出しリスト*/
 
 header {
@@ -493,8 +500,14 @@ form button {
 }
 
 form button:hover {
-    background: rgb(216, 126, 126)7;
+    background: rgb(216, 126, 126);
     color: white;
+}
+
+.todo-input {
+    height: 47px;
+    width: 250px;
+    font-size: 15px;
 }
 
 .todo-container {
@@ -522,7 +535,9 @@ form button:hover {
 
 .todo-button {
     background-color: rgb(216, 126, 126, 0.7);
+    height: 47px;
 }
+
 
 .todo li {
     flex: 1;
@@ -567,10 +582,9 @@ select {
     appearance: none;
     outline: none;
     border: none;
-
-    color: rgb(216, 126, 126);
     width: 10rem;
     padding: 1rem;
+    cursor:none;
 }
 
 .select {
